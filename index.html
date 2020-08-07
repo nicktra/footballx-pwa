@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>FootballX</title>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/icon-192x192.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#424242"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav class="grey darken-3" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">FootballX</a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">&#9776;</a>
+
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul id="nav-mobile" class="sidenav"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+
+  <div class="carousel carousel-slider">
+    <div class="carousel-fixed-item center">
+     <h4 class="white-text" style="margin-bottom: 0px;">Welcome to FootballX</h4>
+     <p class="white-text" style="margin-top: 5px;">Get the latest football standings league</p>
+    </div>
+    <a class="carousel-item" href="#one!"><img src="img/c1.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="img/c2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="img/c3.jpg"></a>
+  </div>
+  
+  <div class="content" style="display: none;">
+    <div class="body-content container"></div>
+
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/old_trafford.jpg"></div>
+    </div>
+    
+    <footer-bar></footer-bar>
+  </div>
+
+  <div class="preloader-wrapper big active" style="display: block;">
+    <div class="spinner-layer spinner-green-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+            <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+            <div class="circle"></div>
+        </div>
+    </div>
+  </div>
+
+  <script src="js/materialize.min.js"></script>
+  <script src="js/footer-bar.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/getCompetitions.js"></script>
+  <script src="js/getSavedTeam.js"></script>
+  <script src="js/sw-push.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/idb.js"></script>
+  <script src="js/db.js"></script>
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        document.querySelector(".content").style.display = "block";
+        document.querySelector(".preloader-wrapper").style.display = "none";
+      }, 2000);
+      
+      var elems = document.querySelectorAll('.parallax');
+      M.Parallax.init(elems);
+
+      var elemsCrl = document.querySelectorAll('.carousel.carousel-slider');
+      M.Carousel.init(elemsCrl, {
+        indicators : true,
+        fullWidth : true,
+        duration : 150
+      });
+
+      setInterval(() => {
+        M.Carousel.getInstance(elemsCrl[0]).next();
+      }, 2000)
+    }  
+  </script>
+</body>
+</html>

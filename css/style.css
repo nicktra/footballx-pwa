@@ -1,0 +1,39 @@
+.footerColor {
+    background-color: #424242 !important;
+}
+
+body {
+    background-color:#f5f5f5 !important;
+    font-family: sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.parallax-container {
+    height: 250px !important;
+}
+
+.preloader-wrapper {
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    right: 0;
+    bottom: 0vh;
+    margin: auto;
+}
+
+#leagues a {
+    color: black;
+}
+
+.carousel {
+  max-height: 300px;
+}
+
+
+@media screen and (max-width: 765px) {
+    .carousel.carousel-slider .carousel-fixed-item.with-indicators {
+        bottom: 20px !important;
+    }
+}
