@@ -13,6 +13,9 @@
   </p>
 </p>
 
+# Updates
+* Adding page and js for getting saved favourite team data from indexeddb
+
 # FootballX
 
 FootbalX is PWA about football around the world. Get the latest football standings league.
