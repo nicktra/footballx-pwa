@@ -17,7 +17,7 @@ function getSavedTeamHTML(teams) {
       <div class="card-panel grey lighten-5 z-depth-1">
         <div class="row">
           <div class="col s12 m6 center">
-            <a href="./team.html?id=${data.id}">
+            <a href="./team.html?id=${data.id}&saved=true">
               <img alt="${data.name}" src="${logoTeam}" class="responsive-img">
             </a>
           </div>
@@ -35,7 +35,7 @@ function getSavedTeamHTML(teams) {
                 <p><i class="tiny material-icons">person</i> ${data.clubColors}</p>
                 <p><i class="tiny material-icons">location_on</i> ${data.address}</p>
                 <p><i class="tiny material-icons">phone</i> ${data.phone}</p>
-                <a style="margin-top:10px;" href="./team.html?id=${data.id}" class="cyan darken-4 waves-effect waves-light btn">
+                <a style="margin-top:10px;" href="./team.html?id=${data.id}&saved=true" class="cyan darken-4 waves-effect waves-light btn">
                   <i class="material-icons left">view_list</i>Detail
                 </a>
               </div>

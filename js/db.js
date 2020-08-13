@@ -70,3 +70,17 @@ function checkFav(id) {
           });
   });
 }
+
+function getById(id) {
+  return new Promise(function(resolve, reject) {
+    dbPromised
+      .then(function(db) {
+        var tx = db.transaction("teams", "readonly");
+        var store = tx.objectStore("teams");
+        return store.get(id);
+      })
+      .then(function(teams) {
+        resolve(teams);
+      });
+  });
+}

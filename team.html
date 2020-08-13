@@ -126,7 +126,7 @@
 
       document.addEventListener("DOMContentLoaded", function() {
         var urlParams = new URLSearchParams(window.location.search);
-        var isFromSaved = Number(urlParams.get("saved"));
+        var isFromSaved = urlParams.get("saved");
         var isDelete = Number(urlParams.get("id"));
 
         checkFav(isDelete);
@@ -139,7 +139,7 @@
           btnSave.style.display = 'none';
           
           // ambil artikel lalu tampilkan
-          getSavedTeam();
+          getSavedTeamById();
         } else {
           var item = getTeamById();
         }

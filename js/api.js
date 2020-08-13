@@ -111,3 +111,10 @@ function getSavedTeam() {
     getSavedTeamHTML(teams);
   });
 }
+
+function getSavedTeamById() {
+  getById(id).then(function(data) {
+    console.log(data);
+    getSavedTeamByIdHTML(data, resolve);
+  });
+}
