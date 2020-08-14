@@ -51,7 +51,7 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Materialize](https://materializecss.com/) - The web CSS framework
-* [IndexedDB](https://github.com/jakearchibald/idb) - the IndexedDB API
+* [IndexedDB](https://github.com/jakearchibald/idb) - thee IndexedDB API
 
 ## Contributing
 
